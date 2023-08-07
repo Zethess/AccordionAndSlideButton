@@ -1,0 +1,159 @@
+:root{ 
+	/* Colors */
+	/* Primary */
+	--blue-color-bg: rgba(35,132,190,255);
+	--gray-background: rgba(241,241,241,255);
+	--gree-background: rgba(47,211,43,255);
+
+     /*Tipo de letra utilizada*/
+     --arial: Arial, Helvetica, sans-serif;
+  
+
+}
+*{
+	box-sizing: border-box; 
+	margin: 0;
+	padding: 0;
+    font-family: var(--arial);
+
+}
+.main{
+    min-height: 100vh;
+    background-color: var(--gray-background);
+}
+.icons{
+    /* display: inline-block; */
+    min-width: .9375rem; /*Para que la imagen no disminuya aunque la pantalla sea muy pequeña, sin el min no lo respeta*/
+    min-height: 1.0625rem;
+    /* background-size:contain;
+    background-repeat: no-repeat; */
+}
+.icons-option {
+    min-width: 2.1875rem; /*Para que la imagen no disminuya aunque la pantalla sea muy pequeña, sin el min no lo respeta*/
+    min-height: 2.1875rem;
+    
+}
+
+
+/* .header-arrow-icon{
+    background-image: url('/assets/images/anterior.svg');
+}
+.header-menu-icon{
+    background-image: url('/assets/images/menu.svg');
+}
+.contain-options-bed-icon{
+    background-image: url('/assets/images/cama.svg');
+}
+.child-configurations-aa-icon{
+    background-image: url('/assets/images/aa.svg');
+}
+.child-configurations-heating-icon{
+    background-image: url('/assets/images/calefacion.svg');
+}
+.child-configurations-light-icon{
+    background-image: url('/assets/images/luz.svg');
+}
+.child-configurations-lock-icon{
+    background-image: url('/assets/images/cerradura.svg');
+} */
+.main-header{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 10px 15px 10px;
+    gap: 10px;
+}
+.icons img{
+    fill: var(--blue-color-bg);
+}
+.main-header p{
+ opacity: 0.7;
+}
+
+.main-contain{
+    background-color: white;
+    min-height: 90vh;
+    padding: 15px 10px;
+}
+
+.contain-title{
+    background-color: var(--blue-color-bg);
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.contain-options-child{
+    background-color: var(--gray-background);
+    display: flex;
+    flex-direction: column;
+    color: var(--blue-color-bg);
+    font-size: 14px;
+    padding: 10px 12px 0px 12px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
+.option-child-title{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+.option-child-title p:hover{
+    cursor: pointer;
+}
+.childs-configuration{
+    display: flex;
+    gap: 15px;
+    margin-bottom: 5px;
+    align-items: center;
+    
+   
+}
+.childs-configuration-hide{
+    display: none;
+}
+.child-configurations-slider{
+    margin-right: 90px;
+}
+.child-configurations-slider input{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+.child-configurations-slider .check{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: rgb(150, 150, 150);
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+    
+}
+.child-configurations-slider input:checked ~ .check{
+    background: var(--gree-background);
+
+}
+.child-configurations-slider .check::before{
+    content: ' ';
+    position: absolute;
+    top: 2px;
+    left: 2.2px;
+    background: var(--blue-color-bg);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+
+}
+.child-configurations-slider input:checked ~ .check::before{
+    transform: translateX(20px);
+}
+
+
+
